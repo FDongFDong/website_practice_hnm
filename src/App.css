@@ -3,3 +3,35 @@
   justify-content: flex-end;
   margin: 20px
 }
+.nav-section{
+  display:flex;
+  justify-content: center;
+}
+.menuList{
+  display: flex;
+  list-style-type: none;
+
+}
+.menuList li{
+  padding :10px
+}
+.menu-area{
+  display: flex;
+  justify-content: center;
+}
+.font-area{
+ display:inline-block;
+ text-align:row;
+
+}
+.search-area{
+  display: flex;
+  margin: 1rem;
+  border-bottom: solid 1px 
+}
+.search-area input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
