@@ -16,6 +16,7 @@ import Login from './page/Login';
 import ProductAll from './page/ProductAll';
 import ProductDetail from './page/ProductDetail';
 import { useEffect, useState } from 'react';
+import PrivateRoute from './route/PrivateRoute';
 
 function App() {
   const [authenticate, setAuthenticate] = useState(false); // false면 로그인이 안됨
@@ -31,7 +32,10 @@ function App() {
           path="/login"
           element={<Login setAuthenticate={setAuthenticate} />}
         ></Route>
-        <Route path="/product/:id" element={<ProductDetail />}></Route>
+        <Route
+          path="/product/:id"
+          element={<PrivateRoute authenticate={authenticate} />}
+        ></Route>
       </Routes>
     </div>
   );

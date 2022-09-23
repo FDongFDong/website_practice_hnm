@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ item }) => {
+  const navigate = useNavigate();
+
+  const showDetail = () => {
+    navigate(`/product/${item?.id}`);
+  };
   return (
-    <div>
+    <div onClick={showDetail}>
       <div className="img-area">
         <img src={item?.img} />
       </div>
