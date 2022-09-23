@@ -9,19 +9,28 @@
 //6. 로그인을 하면 로그아웃이 보이고 로그아웃을 하면 로그인이 보인다.
 //7. 상품을 검색할 수 있다.
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './component/Navbar';
 import Login from './page/Login';
 import ProductAll from './page/ProductAll';
 import ProductDetail from './page/ProductDetail';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false); // false면 로그인이 안됨
+  useEffect(() => {
+    console.log(`aaaa=`, authenticate);
+  }, [authenticate]);
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route
+          path="/login"
+          element={<Login setAuthenticate={setAuthenticate} />}
+        ></Route>
         <Route path="/product/:id" element={<ProductDetail />}></Route>
       </Routes>
     </div>

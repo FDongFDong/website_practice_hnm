@@ -1,7 +1,8 @@
 .login-button{
   display:flex;
   justify-content: flex-end;
-  margin: 20px
+  margin: 20px;
+  cursor: pointer
 }
 .nav-section{
   display:flex;
@@ -34,4 +35,13 @@
   border-left: none;
   border-right: none;
   border-bottom: none;
+}
+.img-area:hover img{
+
+  transform: scale(1.2);
+  /* 가로, 세로 */
+  /* 전체 */
+  transition: transform.5s; 
+  /* transition 커지는 시간 */
+
 }
