@@ -18,6 +18,15 @@ const Navbar = () => {
     'Sale',
     '지속가능성',
   ];
+  const search = (event) => {
+    if (event.key === 'Enter') {
+      //입력한 검색어를 읽어와서
+      //url을 바꿔준다.
+      let keyword = event.target.value;
+      console.log(keyword);
+      navigate(`/?q=${keyword}`);
+    }
+  };
   return (
     <div>
       <div>
@@ -45,7 +54,11 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faSearch} />
           </div>
           <div>
-            <input type="text" placeholder="제품검색" />
+            <input
+              type="text"
+              onKeyPress={(event) => search(event)}
+              placeholder="제품검색"
+            />
           </div>
         </div>
       </div>
