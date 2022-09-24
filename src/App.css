@@ -45,3 +45,8 @@
   /* transition 커지는 시간 */
 
 }
+
+.product-img{
+  display: flex;
+  justify-content: flex-end;
+}
