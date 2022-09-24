@@ -1,7 +1,18 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 const ProductDetail = () => {
-  return <div>상품 디테일 페이지</div>;
+  let { id } = useParams();
+  const getProductDetail = async () => {
+    console.log('?');
+    let url = `http://localhost:3004/products/${id}`;
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log('asdasd', data);
+  };
+  useEffect(() => {
+    getProductDetail();
+  }, []);
+  return <div></div>;
 };
 
 export default ProductDetail;
