@@ -9,7 +9,7 @@ const ProductAll = () => {
     // 쿼리 값이 없는 경우 빈 문자
     let searchQuerey = query.get('q') || '';
 
-    let url = `http://localhost:3004/products?q=${searchQuerey}`;
+    let url = `https://my-json-server.typicode.com/FdongFdong/website_practice_hnm/products?q=${searchQuerey}`;
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
@@ -22,7 +22,7 @@ const ProductAll = () => {
       <Container>
         <Row>
           {productList.map((menu) => (
-            <Col lg={3}>
+            <Col lg={4}>
               <ProductCard item={menu} />
             </Col>
           ))}

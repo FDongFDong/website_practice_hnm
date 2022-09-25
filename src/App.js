@@ -14,7 +14,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './component/Navbar';
 import Login from './page/Login';
 import ProductAll from './page/ProductAll';
-import ProductDetail from './page/ProductDetail';
+
 import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
 
