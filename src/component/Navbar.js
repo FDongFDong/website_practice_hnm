@@ -45,8 +45,8 @@ const Navbar = () => {
       </div>
       <div className="menu-area">
         <ul className="menuList">
-          {menuList.map((menu) => {
-            return <li>{menu}</li>;
+          {menuList.map((menu, key) => {
+            return <li key={key}>{menu}</li>;
           })}
         </ul>
         <div className="search-area">
